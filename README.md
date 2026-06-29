@@ -1,4 +1,4 @@
-# Satellite-Image-Classifier-and-Detect-Deforestation# 🛰️ Satellite Image Classifier — Full Stack Project
+# Satellite-Image-Classifier-and-Detect-Deforestation# 🛰️ 
 
 ResNet50 + EuroSAT → FastAPI backend → React frontend  
 **Land Cover Classification + Deforestation Detection**
