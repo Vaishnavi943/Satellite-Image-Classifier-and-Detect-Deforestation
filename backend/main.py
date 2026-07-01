@@ -1,6 +1,5 @@
 # ============================================================
 # FastAPI Backend — Satellite Image Classifier + Deforestation Detection
-# File: main.py
 # Run: uvicorn main:app --reload
 # ============================================================
 
@@ -16,6 +15,12 @@ import io
 import base64
 import numpy as np
 import logging
+from dotenv import load_dotenv
+load_dotenv()
+import os
+
+FRONTEND_URL = os.getenv("FRONTEND_URL")
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -28,7 +33,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "*"],
+    allow_origins=[FRONTEND_URL, "http://localhost:5173", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
