@@ -53,10 +53,10 @@ pip install -r requirements.txt
 # backend/eurosat_model_full.pth
 
 # Run server
-uvicorn main:app --reload --port 8000
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-API is now live at: http://localhost:8000  
+API is now live at: satellite-image-classifier-and-dete-beige.vercel.app 
 Swagger docs at:   http://localhost:8000/docs
 
 ### API Endpoints
